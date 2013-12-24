@@ -23,6 +23,9 @@ $ php composer.phar update
     
 For more information about composer itself, please refer to [getcomposer.org](http://getcomposer.org/).
 
+*Heads up!* Composer autoloader must be utilized in your application so that MobileDetect dependency 
+of this module can be loaded properly.
+
 ### Enable the module in your `application.config.php`:
 
 ```php
