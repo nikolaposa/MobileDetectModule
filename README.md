@@ -1,6 +1,6 @@
 # MobileDetectModule
 
-MobileDetectModule is a ZF2 Module which facilitates integration of a PHP MobileDetect class 
+MobileDetectModule is a ZF2 module which facilitates integration of a PHP MobileDetect class 
 ([http://mobiledetect.net](http://mobiledetect.net)).
 
 ## Installation
@@ -53,7 +53,7 @@ the [Mobile Detect](http://mobiledetect.net/) project documenation for more info
 View helper - `mobileDetect` is available for providing access to the MobileDetect service on the 
 view layer:
 ```php
-$this->mobileDetect()->isTablet();
+echo $this->mobileDetect()->version('Android');
 ```
 
 ### Controller plugin
