@@ -1,0 +1,42 @@
+{
+    "name": "nikolaposa/mobile-detect-module",
+    "description": "ZF2 Module which facilitates integration of a PHP MobileDetect class",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "zf2",
+        "zend",
+        "module",
+        "mobile",
+        "mobiledetect"
+    ],
+    "homepage": "https://github.com/nikolaposa/MobileDetectModule",
+    "authors": [
+        {
+            "name": "Nikola Posa",
+            "email": "posa.nikola@gmail.com",
+            "homepage": "http://www.nikolaposa.in.rs"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "zendframework/zend-http": "2.*",
+        "zendframework/zend-view": "2.*",
+        "zendframework/zend-mvc": "2.*",
+        "zendframework/zend-modulemanager": "2.*",
+        "zendframework/zend-servicemanager": "2.*",
+        "mobiledetect/mobiledetectlib": "2.*"
+    },
+    "require-dev": {
+        "zendframework/zend-loader": "2.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "MobileDetectModule": "src/",
+            "MobileDetectModuleTest": "test/"
+        },
+        "classmap": [
+            "./"
+        ]
+    }
+}
