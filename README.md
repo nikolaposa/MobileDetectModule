@@ -45,8 +45,14 @@ return array(
 
 ### MobileDetect service
 
-The actual Mobile_Detect class instance will be available under the `MobileDetect` service. Refer to 
+The actual `Mobile_Detect` class instance will be available under the `MobileDetect` service. Refer to 
 the [Mobile Detect](http://mobiledetect.net/) project documenation for more information about its features.
+```php
+$mobileDetect = $serviceLocator->get('MobileDetect'); //`Mobile_Detect` class instance
+if ($mobileDetect->isMobile()) {
+    //do something
+}
+```
 
 ### View helper
 
