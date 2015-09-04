@@ -28,15 +28,22 @@
         "mobiledetect/mobiledetectlib": "2.*"
     },
     "require-dev": {
-        "zendframework/zend-loader": "2.*"
+        "zendframework/zend-config": "2.*",
+        "zendframework/zend-loader": "2.*",
+        "zendframework/zend-stdlib": "2.*",
+        "zendframework/zend-serializer": "2.*",
+        "zendframework/zend-log": "2.*",
+        "zendframework/zend-i18n": "2.*"
     },
     "autoload": {
         "psr-0": {
-            "MobileDetectModule": "src/",
-            "MobileDetectModuleTest": "test/"
+            "MobileDetectModule": "src/"
         },
         "classmap": [
-            "./"
+            "src/"
         ]
+    },
+    "autoload-dev": {
+        "psr-0": { "MobileDetectModuleTest": "tests/" }
     }
 }

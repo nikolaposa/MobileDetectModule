@@ -1,0 +1,7 @@
+<phpunit bootstrap="./tests/Bootstrap.php" colors="true">
+    <testsuites>
+        <testsuite name="MobileDetectModule Module Tests">
+            <directory>./tests/MobileDetectModuleTest</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>
