@@ -13,7 +13,7 @@ Add this project into your composer.json:
 
 ```json
 "require": {
-    "nikolaposa/mobile-detect-module": "~1.0"
+    "nikolaposa/mobile-detect-module": "1.*"
 }
 ```
 
