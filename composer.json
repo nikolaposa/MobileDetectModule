@@ -33,7 +33,9 @@
         "zendframework/zend-stdlib": "2.*",
         "zendframework/zend-serializer": "2.*",
         "zendframework/zend-log": "2.*",
-        "zendframework/zend-i18n": "2.*"
+        "zendframework/zend-i18n": "2.*",
+        "zendframework/zend-test": "2.*",
+        "phpunit/phpunit": "^4.0"
     },
     "autoload": {
         "psr-0": {

@@ -11,7 +11,7 @@
 namespace MobileDetectModuleTest\Util;
 
 use Zend\ServiceManager\ServiceManager;
-use Zend\Mvc\Service\ServiceManagerConfig;
+use Zend\Test\Util\ModuleLoader;
 
 final class ServiceManagerFactory
 {
@@ -20,32 +20,19 @@ final class ServiceManagerFactory
      */
     protected static $config;
 
-    /**
-     * @param array $config
-     */
+    private function __construct()
+    {
+    }
+
     public static function setConfig(array $config)
     {
         self::$config = $config;
     }
 
-    /**
-     * Builds a new service manager
-     *
-     * @return \Zend\ServiceManager\ServiceManager
-     */
-    public static function getServiceManager()
+    public static function getServiceManager(array $config = null)
     {
-        $serviceManager = new ServiceManager(
-            new ServiceManagerConfig(
-                isset(self::$config['service_manager']) ? self::$config['service_manager'] : array()
-            )
-        );
+        $moduleLoader = new ModuleLoader($config ?: self::$config);
 
-        $serviceManager->setService('ApplicationConfig', self::$config);
-        $serviceManager->setFactory('ServiceListener', 'Zend\Mvc\Service\ServiceListenerFactory');
-
-        $serviceManager->get('ModuleManager')->loadModules();
-
-        return $serviceManager;
+        return $moduleLoader->getServiceManager();
     }
 }
