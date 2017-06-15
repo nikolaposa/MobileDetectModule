@@ -8,31 +8,20 @@
  * located at the package root folder.
  */
 
-namespace MobileDetectModule\Service;
+namespace MobileDetectModule\View\Helper;
 
-use Detection\MobileDetect;
 use Interop\Container\ContainerInterface;
-use Zend\Http\PhpEnvironment\Request as HttpRequest;
 use Zend\ServiceManager\Factory\FactoryInterface;
 
 /**
- * Creates and builds MobileDetect service.
- *
  * @author Nikola Posa <posa.nikola@gmail.com>
  */
 class MobileDetectFactory implements FactoryInterface
 {
     public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
     {
-        $mobileDetect = new MobileDetect();
+        $mobileDetect = $container->get('MobileDetect');
 
-        $request = $container->get('Request');
-
-        if ($request instanceof HttpRequest) {
-            $mobileDetect->setHttpHeaders($request->getServer()->toArray());
-            $mobileDetect->setUserAgent($request->getServer('HTTP_USER_AGENT'));
-        }
-
-        return $mobileDetect;
+        return new MobileDetect($mobileDetect);
     }
 }
