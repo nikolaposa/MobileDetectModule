@@ -22,7 +22,6 @@ return [
         'factories' => [
             'mobileDetect' => MobileDetectControllerFactory::class,
         ],
-
     ],
     'view_helpers'       => [
         'factories' => [
