@@ -1,10 +1,10 @@
 {
     "name": "nikolaposa/mobile-detect-module",
-    "description": "ZF2 Module which facilitates integration of a PHP MobileDetect class",
+    "description": "ZF3 Module which facilitates integration of a PHP MobileDetect class",
     "type": "library",
     "license": "MIT",
     "keywords": [
-        "zf2",
+        "zf3",
         "zend",
         "module",
         "mobile",
@@ -19,22 +19,20 @@
         }
     ],
     "require": {
-        "php": ">=5.3.3",
-        "zendframework/zend-http": "2.*",
-        "zendframework/zend-view": "2.*",
-        "zendframework/zend-mvc": "2.*",
-        "zendframework/zend-modulemanager": "2.*",
-        "zendframework/zend-servicemanager": "2.*",
+        "php": "^5.6 || ^7.0",
+        "zendframework/zend-view": "^2.5 || ^2.8",
+        "zendframework/zend-mvc": "^3.0",
+        "zendframework/zend-servicemanager": "^2.5 || ^3.1",
         "mobiledetect/mobiledetectlib": "2.*"
     },
     "require-dev": {
-        "zendframework/zend-config": "2.*",
-        "zendframework/zend-loader": "2.*",
-        "zendframework/zend-stdlib": "2.*",
-        "zendframework/zend-serializer": "2.*",
-        "zendframework/zend-log": "2.*",
-        "zendframework/zend-i18n": "2.*",
-        "zendframework/zend-test": "2.*",
+        "zendframework/zend-config": "*",
+        "zendframework/zend-loader": "*",
+        "zendframework/zend-stdlib": "*",
+        "zendframework/zend-serializer": "*",
+        "zendframework/zend-log": "*",
+        "zendframework/zend-i18n": "*",
+        "zendframework/zend-test": "*",
         "phpunit/phpunit": "^4.0"
     },
     "autoload": {
@@ -46,6 +44,8 @@
         ]
     },
     "autoload-dev": {
-        "psr-0": { "MobileDetectModuleTest": "tests/" }
+        "psr-0": {
+            "MobileDetectModuleTest": "tests/"
+        }
     }
 }
