@@ -20,8 +20,10 @@
     ],
     "require": {
         "php": "^5.6 || ^7.0",
-        "zendframework/zend-view": "^2.5 || ^2.8",
+        "zendframework/zend-http": "^2.6",
+        "zendframework/zend-view": "^2.9",
         "zendframework/zend-mvc": "^3.0",
+        "zendframework/zend-modulemanager": "^2.7",
         "zendframework/zend-servicemanager": "^2.5 || ^3.1",
         "mobiledetect/mobiledetectlib": "2.*"
     },
