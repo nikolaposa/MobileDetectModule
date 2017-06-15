@@ -10,7 +10,6 @@
 
 namespace MobileDetectModuleTest\Util;
 
-use Zend\ServiceManager\ServiceManager;
 use Zend\Test\Util\ModuleLoader;
 
 final class ServiceManagerFactory

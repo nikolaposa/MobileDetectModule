@@ -1,10 +1,11 @@
 <?php
-return array(
-    'modules' => array(
+
+return [
+    'modules' => [
         'MobileDetectModule',
-    ),
-	'module_listener_options' => array(
-        'config_glob_paths' => array(),
-        'module_paths' => array(),
-    ),
-);
+    ],
+    'module_listener_options' => [
+        'config_glob_paths' => [],
+        'module_paths'      => [],
+    ],
+];
