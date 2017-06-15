@@ -18,7 +18,7 @@ use PHPUnit_Framework_TestCase;
  */
 class MobileDetectTest extends PHPUnit_Framework_TestCase
 {
-    public function testInvokationReturnsMobileDetectInstance()
+    public function testInvocationReturnsMobileDetectInstance()
     {
         $mobileDetect = $this->getMock('Detection\MobileDetect', [], [], '', false);
 
