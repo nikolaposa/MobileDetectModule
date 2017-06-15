@@ -1,5 +1,5 @@
 {
-    "name": "nikolaposa/mobile-detect-module",
+    "name": "jonathanmaron/mobile-detect-module",
     "description": "ZF3 Module which facilitates integration of a PHP MobileDetect class",
     "type": "library",
     "license": "MIT",
