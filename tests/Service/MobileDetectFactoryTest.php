@@ -61,7 +61,10 @@ class MobileDetectFactoryTest extends TestCase
             $this->assertSame('Request object required for creating MobileDetect was not found in the container', $ex->getMessage());
         }
     }
-    
+
+    /**
+     * @test
+     */
     public function it_creates_mobile_detect_from_module_manager()
     {
         $container = ServiceManagerFactory::getServiceManager();

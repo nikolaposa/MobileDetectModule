@@ -2,6 +2,7 @@
 
 return [
     'modules' => [
+        'Zend\Router',
         'MobileDetectModule',
     ],
     'module_listener_options' => [

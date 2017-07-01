@@ -3,6 +3,7 @@
 namespace MobileDetectModuleTest;
 
 use Zend\ModuleManager\ModuleManager;
+use Zend\Mvc\Service\ServiceManagerConfig;
 use Zend\ServiceManager\ServiceManager;
 
 class ServiceManagerFactory
@@ -23,7 +24,9 @@ class ServiceManagerFactory
     {
         $config = $config ?: static::getConfiguration();
 
-        $serviceManager = new ServiceManager(isset($config['service_manager']) ? $config['service_manager'] : []);
+        $serviceManager = new ServiceManager();
+        $serviceManagerCongig = new ServiceManagerConfig(isset($config['service_manager']) ? $config['service_manager'] : []);
+        $serviceManagerCongig->configureServiceManager($serviceManager);
         $serviceManager->setService('ApplicationConfig', $config);
 
         /* @var $moduleManager ModuleManager */
