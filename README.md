@@ -1,6 +1,7 @@
 # MobileDetectModule
 
 [![Build Status][ico-build]][link-build]
+[![Code Quality][ico-code-quality]][link-code-quality]
 [![Code Coverage][ico-code-coverage]][link-code-coverage]
 [![Latest Version][ico-version]][link-packagist]
 
@@ -77,10 +78,12 @@ Released under MIT License - see the [License File](LICENSE) for details.
 [ico-version]: https://img.shields.io/packagist/v/nikolaposa/mobile-detect-module.svg
 [ico-build]: https://travis-ci.org/nikolaposa/MobileDetectModule.svg?branch=master
 [ico-code-coverage]: https://img.shields.io/scrutinizer/coverage/g/nikolaposa/MobileDetectModule.svg?b=master
+[ico-code-quality]: https://img.shields.io/scrutinizer/g/nikolaposa/MobileDetectModule.svg?b=master
 
 [link-packagist]: https://packagist.org/packages/nikolaposa/mobile-detect-module
 [link-build]: https://travis-ci.org/nikolaposa/MobileDetectModule
 [link-code-coverage]: https://scrutinizer-ci.com/g/nikolaposa/MobileDetectModule/code-structure
+[link-code-quality]: https://scrutinizer-ci.com/g/nikolaposa/MobileDetectModule
 [link-author]: https://github.com/nikolaposa
 [link-contributors]: ../../contributors
 [link-examples]: examples
