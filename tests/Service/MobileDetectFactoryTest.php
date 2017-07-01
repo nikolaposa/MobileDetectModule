@@ -65,7 +65,7 @@ class MobileDetectFactoryTest extends TestCase
     /**
      * @test
      */
-    public function it_creates_mobile_detect_from_module_manager()
+    public function it_creates_mobile_detect_in_the_full_application_context()
     {
         $container = ServiceManagerFactory::getServiceManager();
         
