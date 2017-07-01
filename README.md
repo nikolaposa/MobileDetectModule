@@ -73,11 +73,11 @@ if ($this->mobileDetect()->isTablet()) {
 Released under MIT License - see the [License File](LICENSE) for details.
 
 
-[ico-version]: https://img.shields.io/packagist/v/nikolaposa/MobileDetectModule.svg
+[ico-version]: https://img.shields.io/packagist/v/nikolaposa/mobile-detect-module.svg
 [ico-build]: https://travis-ci.org/nikolaposa/MobileDetectModule.svg?branch=master
 [ico-code-coverage]: https://img.shields.io/scrutinizer/coverage/g/nikolaposa/MobileDetectModule.svg?b=master
 
-[link-packagist]: https://packagist.org/packages/nikolaposa/MobileDetectModule
+[link-packagist]: https://packagist.org/packages/nikolaposa/mobile-detect-module
 [link-build]: https://travis-ci.org/nikolaposa/MobileDetectModule
 [link-code-coverage]: https://scrutinizer-ci.com/g/nikolaposa/MobileDetectModule/code-structure
 [link-author]: https://github.com/nikolaposa
