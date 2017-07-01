@@ -17,7 +17,7 @@ use Zend\Stdlib\Parameters;
 class MobileDetectFactoryTest extends TestCase
 {
     /**
-     * @var MobileDetectFactory 
+     * @var MobileDetectFactory
      */
     protected $factory;
     
