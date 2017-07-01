@@ -1,44 +1,30 @@
 # MobileDetectModule
 
-[![Build Status](https://travis-ci.org/nikolaposa/MobileDetectModule.svg?branch=master)](https://travis-ci.org/nikolaposa/MobileDetectModule)
+[![Build Status][ico-build]][link-build]
+[![Code Coverage][ico-code-coverage]][link-code-coverage]
+[![Latest Version][ico-version]][link-packagist]
 
-MobileDetectModule is a ZF2 module which facilitates integration of a PHP MobileDetect class
-([http://mobiledetect.net](http://mobiledetect.net)).
+ZF module which facilitates integration of a PHP MobileDetect library ([http://mobiledetect.net](http://mobiledetect.net)).
 
 ## Installation
 
-Installation of this module should be performed via composer:
-
-Add this project into your composer.json:
-
-```json
-"require": {
-    "nikolaposa/mobile-detect-module": "1.*"
-}
-```
-
-Tell composer to download MobileDetectModule by running update command:
+The preferred method of installation is via [Composer](http://getcomposer.org/). Run the following command to install the latest version of a package and add it to your project's `composer.json`:
 
 ```bash
-$ php composer.phar update
+composer require nikolaposa/mobile-detect-module
 ```
-
-For more information about composer itself, please refer to [getcomposer.org](http://getcomposer.org/).
-
-**Heads up! Composer autoloader must be utilized in your application so that MobileDetect dependency
-of this module can be loaded properly.**
 
 ### Enable the module in your `application.config.php`:
 
 ```php
 <?php
-return array(
-    'modules' => array(
+return [
+    'modules' => [
         // ...
         'MobileDetectModule',
-    ),
+    ],
     // ...
-);
+];
 ```
 
 ## Features
@@ -50,8 +36,8 @@ return array(
 
 ### MobileDetect service
 
-The actual `Mobile_Detect` class instance will be available under the `MobileDetect` service. Refer to
-the [Mobile Detect](http://mobiledetect.net/) project documenation for more information about its features.
+The actual `Mobile_Detect` class instance will be available under the `MobileDetect` service. Refer to the [Mobile Detect](http://mobiledetect.net/) project documenation for more information about its features.
+
 ```php
 $mobileDetect = $serviceLocator->get('MobileDetect'); //`Mobile_Detect` class instance
 if ($mobileDetect->isMobile()) {
@@ -61,18 +47,39 @@ if ($mobileDetect->isMobile()) {
 
 ### View helper
 
-View helper - `mobileDetect` is available for providing access to the MobileDetect service on the
-view layer:
+View helper - `mobileDetect` is available for providing access to the MobileDetect service on the view layer:
+
 ```php
 echo $this->mobileDetect()->version('Android');
 ```
 
 ### Controller plugin
 
-Controller plugin - `mobileDetect` is available for providing access to the MobileDetect service on
-the controller layer:
+Controller plugin - `mobileDetect` is available for providing access to the MobileDetect service on the controller layer:
+
 ```php
 if ($this->mobileDetect()->isTablet()) {
     //do something
 }
 ```
+
+## Credits
+
+- [Nikola Poša][link-author]
+- [All Contributors][link-contributors]
+
+## License
+
+Released under MIT License - see the [License File](LICENSE) for details.
+
+
+[ico-version]: https://img.shields.io/packagist/v/nikolaposa/MobileDetectModule.svg
+[ico-build]: https://travis-ci.org/nikolaposa/MobileDetectModule.svg?branch=master
+[ico-code-coverage]: https://img.shields.io/scrutinizer/coverage/g/nikolaposa/MobileDetectModule.svg?b=master
+
+[link-packagist]: https://packagist.org/packages/nikolaposa/MobileDetectModule
+[link-build]: https://travis-ci.org/nikolaposa/MobileDetectModule
+[link-code-coverage]: https://scrutinizer-ci.com/g/nikolaposa/MobileDetectModule/code-structure
+[link-author]: https://github.com/nikolaposa
+[link-contributors]: ../../contributors
+[link-examples]: examples

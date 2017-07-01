@@ -1,7 +1,15 @@
-<phpunit bootstrap="./tests/Bootstrap.php" colors="true">
+<phpunit
+    bootstrap="./vendor/autoload.php"
+    colors="true"
+>
     <testsuites>
-        <testsuite name="MobileDetectModule Module Tests">
-            <directory>./tests/MobileDetectModuleTest</directory>
+        <testsuite name="MobileDetectModule tests">
+            <directory>./tests</directory>
         </testsuite>
     </testsuites>
+    <filter>
+        <whitelist addUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">./src</directory>
+        </whitelist>
+    </filter>
 </phpunit>

@@ -8,23 +8,29 @@
  * located at the package root folder.
  */
 
-namespace MobileDetectModule\View\Helper;
+namespace MobileDetectModule\Mvc\Controller\Plugin;
 
 use Detection\MobileDetect as MobileDetector;
-use Zend\View\Helper\AbstractHelper;
+use Zend\Mvc\Controller\Plugin\AbstractPlugin;
 
 /**
  * @author Nikola Posa <posa.nikola@gmail.com>
  */
-class MobileDetect extends AbstractHelper
+final class MobileDetect extends AbstractPlugin
 {
-    protected $mobileDetect;
+    /**
+     * @var MobileDetector
+     */
+    private $mobileDetect;
     
     public function __construct(MobileDetector $mobileDetect)
     {
         $this->mobileDetect = $mobileDetect;
     }
 
+    /**
+     * @return MobileDetector
+     */
     public function __invoke()
     {
         return $this->mobileDetect;

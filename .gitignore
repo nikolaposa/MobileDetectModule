@@ -1,5 +1,4 @@
-nbproject
-.project
+vendor/
 composer.lock
-vendor
 phpunit.xml
+.php_cs.cache
