@@ -65,12 +65,11 @@ class MobileDetectFactoryTest extends TestCase
     /**
      * @test
      */
-    public function it_creates_mobile_detect_in_the_full_application_context()
+    public function it_is_registered_as_app_service_factory()
     {
-        $container = ServiceManagerFactory::getServiceManager();
-        
-        $mobileDetect = $this->factory->__invoke($container);
-        
-        $this->assertInstanceOf(MobileDetect::class, $mobileDetect);
+        $serviceManager = ServiceManagerFactory::getServiceManager();
+
+        $this->assertTrue($serviceManager->has(MobileDetect::class));
+        $this->assertTrue($serviceManager->has('MobileDetect'));
     }
 }

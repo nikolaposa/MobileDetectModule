@@ -25,8 +25,8 @@ class ServiceManagerFactory
         $config = $config ?: static::getConfiguration();
 
         $serviceManager = new ServiceManager();
-        $serviceManagerCongig = new ServiceManagerConfig(isset($config['service_manager']) ? $config['service_manager'] : []);
-        $serviceManagerCongig->configureServiceManager($serviceManager);
+        $serviceManagerConfig = new ServiceManagerConfig(isset($config['service_manager']) ? $config['service_manager'] : []);
+        $serviceManagerConfig->configureServiceManager($serviceManager);
         $serviceManager->setService('ApplicationConfig', $config);
 
         /* @var $moduleManager ModuleManager */

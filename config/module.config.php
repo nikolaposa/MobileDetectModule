@@ -4,25 +4,19 @@ return [
     'controller_plugins' => [
         'factories' => [
             'MobileDetect' => MobileDetectModule\Mvc\Controller\Plugin\MobileDetectFactory::class,
-        ],
-        'aliases' => [
-            'mobileDetect' => 'MobileDetect',
+            'mobileDetect' => MobileDetectModule\Mvc\Controller\Plugin\MobileDetectFactory::class,
         ],
     ],
     'view_helpers' => [
         'factories' => [
             'MobileDetect' => MobileDetectModule\View\Helper\MobileDetectFactory::class,
-        ],
-        'aliases' => [
-            'mobileDetect' => 'MobileDetect',
+            'mobileDetect' => MobileDetectModule\View\Helper\MobileDetectFactory::class,
         ],
     ],
     'service_manager' => [
         'factories' => [
             Detection\MobileDetect::class => MobileDetectModule\Service\MobileDetectFactory::class,
-        ],
-        'aliases' => [
-            'MobileDetect' => Detection\MobileDetect::class,
+            'MobileDetect' => MobileDetectModule\Service\MobileDetectFactory::class,
         ],
     ],
 ];
